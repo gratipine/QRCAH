@@ -1,6 +1,14 @@
 <resources>
+    <!-- Strings for the Main activity-->
     <string name="app_name">CAHQR</string>
     <string name="button_toScanning">Scan</string>
     <string name="button_toAdding">Create a QR code</string>
     <string name="button_toAbout">About</string>
+
+    <!--Strings for the adding activity-->
+    <string name = "addingPromptTextView">Please enter the text for which you want to generate QR:</string>
+    <string name="addCodeSubmitButton">Submit</string>
+
+    <!--Strings for scanning activity-->
+    <string name="scanningMessageToUserTextView">Currently scanning</string>
 </resources>

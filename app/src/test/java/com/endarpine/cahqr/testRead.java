@@ -16,6 +16,7 @@ public class testRead {
         String correct = "Haha";
         while(correct!="y"&&correct!="n"){
             System.out.println("Is the string you hear the correct string? y/n");
+            //todo:fix the scanner
             correct = in.next();
         }
         Assert.assertTrue(correct=="y");

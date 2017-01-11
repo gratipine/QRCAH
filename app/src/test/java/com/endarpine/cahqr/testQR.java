@@ -6,8 +6,7 @@ package com.endarpine.cahqr;
  */
 import android.graphics.Bitmap;
 
-import com.endarpine.QR;
-import com.google.zxing.WriterException;
+import com.endarpine.cahqr.Logic.QR;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,7 +23,7 @@ public class testQR {
         try {
             result = QR.encode(message);
             answer = QR.interpret(result);
-        } catch (WriterException e) {
+        } catch (Exception e) {
             fail("Should be passing with no problem");
         }
 
