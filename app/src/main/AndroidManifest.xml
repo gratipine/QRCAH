@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".scanningCode" />
         <activity android:name=".addCode" />
-        <activity android:name=".reader"></activity>
+        <activity android:name=".reader" />
+        <activity android:name=".about" />
+        <activity android:name=".codePicture"></activity>
     </application>
 
 </manifest>

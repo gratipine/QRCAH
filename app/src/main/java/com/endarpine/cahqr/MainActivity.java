@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     //todo: add settings activity somehow
     //todo:refactor the names of the strings and buttons to be similar (UI)
+    //todo:refactor to double ensure back button works
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void scanCode(View view) {
-        //todo the necessary to pass to the scan code activity
         Intent intent = new Intent(this, com.endarpine.cahqr.scanningCode.class);
         startActivity(intent);
     }

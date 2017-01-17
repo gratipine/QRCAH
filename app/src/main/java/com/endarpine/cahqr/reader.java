@@ -25,7 +25,6 @@ import java.util.Locale;
 //source:https://www.tutorialspoint.com/android/android_text_to_speech.htm
 public class reader extends AppCompatActivity {
 
-    //todo:figure out a way to pass the QR from scanning to here
     //todo: add a bunch of ifs to handle showing text, not showing text and so on - to be done in the onCreate
     Bitmap QR;
     TextToSpeech t1;

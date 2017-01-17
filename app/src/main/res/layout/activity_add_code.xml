@@ -17,7 +17,8 @@
         android:layout_below="@+id/addCodeEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:id="@+id/addCodeSubmitButton" />
+        android:id="@+id/addCodeSubmitButton"
+        android:onClick="codeAdded"/>
 
     <TextView
         android:layout_width="wrap_content"
