@@ -14,6 +14,9 @@ import android.widget.EditText;
 
 public class addCode extends FragmentActivity {
 
+    final static String EXTRA_MESSAGE = "Passed from the adding code activity";
+    final static String ALERT_TEXT = "You haven't written anything, so no code for you!";
+
     Button addCodeSubmitButton;
     EditText addCodeEditText;
     //todo: figure out how to pass the message towards the next activity and create a picture
@@ -32,18 +35,21 @@ public class addCode extends FragmentActivity {
     public void codeAdded(View view){
         String textToAdd = addCodeEditText.getText().toString();
         if(textToAdd==null){
-            //todo: if it is null, a message prompts the user to add something on the field
+            //shows an alert if the user box is empty and prompts the user to go back
             showAlert();
         } else {
-            //todo: add same method for getting the message as the scanning activity
-            Intent intent = new Intent(this, codePicture.class);
-            startActivity(intent);
+            //passes the user text to the activity which displays the QR code
+            Intent toReadyCode = new Intent(this, codePicture.class);
+            toReadyCode.putExtra(EXTRA_MESSAGE, textToAdd);
+            startActivity(toReadyCode);
         }
-
     }
+    //creates an alert object and shows its message if the user did not write a code text before pressing Submit button
     private void showAlert(){
         FragmentManager fm = getSupportFragmentManager();
         Alert alert = new Alert();
+        Bundle bundle = new Bundle();
+        bundle.putString("text", ALERT_TEXT);
         alert.show(fm,"fragment_alert");
     }
 }
