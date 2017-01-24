@@ -2,7 +2,9 @@ package com.endarpine.cahqr;
 
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -19,8 +21,6 @@ public class addCode extends FragmentActivity {
 
     Button addCodeSubmitButton;
     EditText addCodeEditText;
-    //todo: figure out how to pass the message towards the next activity and create a picture
-    //todo:add code which check if the user has written something or not
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +46,20 @@ public class addCode extends FragmentActivity {
     }
     //creates an alert object and shows its message if the user did not write a code text before pressing Submit button
     private void showAlert(){
-        FragmentManager fm = getSupportFragmentManager();
-        Alert alert = new Alert();
-        Bundle bundle = new Bundle();
-        bundle.putString("text", ALERT_TEXT);
-        alert.show(fm,"fragment_alert");
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(addCode.this);
+        builder1.setMessage("Write your message here.");
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+
+
     }
 }

@@ -29,16 +29,11 @@ public class codePicture extends AppCompatActivity {
         } catch (WriterException e) {
             //todo:handle exception
             e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            //todo: handle this
+            e.printStackTrace();
         }
         //todo:add a container for the QR code in the layout
 
-    }
-
-    private void showAlert() {
-        FragmentManager fm = getSupportFragmentManager();
-        Alert alert = new Alert();
-        Bundle bundle = new Bundle();
-        bundle.putString("text", ALERT_TEXT);
-        alert.show(fm, "fragment_alert");
     }
 }

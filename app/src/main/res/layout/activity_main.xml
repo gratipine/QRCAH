@@ -21,22 +21,34 @@
         android:onClick="scanCode"/>
 
     <Button
+        android:text="@string/button_toSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_toSettings"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/button_toAbout"
+        android:layout_alignLeft="@+id/button_toAbout"
+        android:layout_alignStart="@+id/button_toAbout"
+        android:onClick="settings"/>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_toCreate"
         android:text="@string/button_toAdding"
-        android:layout_above="@+id/button_toAbout"
+        android:onClick="addCode"
+        android:layout_below="@+id/button_toScanning"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
-        android:onClick="addCode"/>
+        android:layout_marginTop="19dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_toAbout"
         android:text="@string/button_toAbout"
-        android:layout_centerVertical="true"
+        android:onClick="about"
+        android:layout_below="@+id/button_toCreate"
         android:layout_alignLeft="@+id/button_toScanning"
         android:layout_alignStart="@+id/button_toScanning"
-        android:onClick="about"/>
+        android:layout_marginTop="11dp" />
 </RelativeLayout>

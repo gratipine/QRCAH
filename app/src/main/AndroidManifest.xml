@@ -19,7 +19,11 @@
         <activity android:name=".addCode" />
         <activity android:name=".reader" />
         <activity android:name=".about" />
-        <activity android:name=".codePicture"></activity>
+        <activity android:name=".codePicture" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".Alert2"></activity>
     </application>
 
 </manifest>
