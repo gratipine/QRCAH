@@ -21,6 +21,10 @@
         card games to help visually challenged people, but could be put to other uses as well.
     </string>
 
+    <!--Strings for reader activity-->
+    <string name="textVisibility">Have text be visible</string>
+    <string name="soundAvailability">Have the app read out the text</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_settings">Settings</string>

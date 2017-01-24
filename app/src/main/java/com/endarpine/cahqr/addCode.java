@@ -47,7 +47,7 @@ public class addCode extends FragmentActivity {
     //creates an alert object and shows its message if the user did not write a code text before pressing Submit button
     private void showAlert(){
         AlertDialog.Builder builder1 = new AlertDialog.Builder(addCode.this);
-        builder1.setMessage("Write your message here.");
+        builder1.setMessage(ALERT_TEXT);
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(

@@ -6,6 +6,9 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -25,11 +28,12 @@ import java.util.Locale;
 
 //source:https://www.tutorialspoint.com/android/android_text_to_speech.htm
 public class reader extends AppCompatActivity {
-
-    //todo: add a bunch of ifs to handle showing text, not showing text and so on - to be done in the onCreate
     Bitmap QR;
     TextToSpeech t1;
+    public static Boolean showsText = Boolean.FALSE;
+    public static Boolean readsText = Boolean.TRUE;
     private static String message;
+    //todo: implement in the setting change of the text visibility and readability as well
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,18 +42,24 @@ public class reader extends AppCompatActivity {
         //getting the contents of the QR from the scanner
         Intent intent = getIntent();
         message = intent.getStringExtra(scanningCode.EXTRA_MESSAGE);
-        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR){
-                    t1.setLanguage(Locale.ENGLISH);
+        if(readsText){
+            t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int status) {
+                    if(status != TextToSpeech.ERROR){
+                        t1.setLanguage(Locale.ENGLISH);
+                    }
                 }
-            }
-        });
-        String stringToSpeak = Facade.getQRMessage(QR);
-        Toast.makeText(getApplicationContext(), stringToSpeak,Toast.LENGTH_SHORT).show();
-        //todo: figure out something not deprecated
-        t1.speak(stringToSpeak, TextToSpeech.QUEUE_FLUSH, null);
+            });
+            String stringToSpeak = Facade.getQRMessage(QR);
+            Toast.makeText(getApplicationContext(), stringToSpeak,Toast.LENGTH_SHORT).show();
+            //todo: figure out something not deprecated
+            t1.speak(stringToSpeak, TextToSpeech.QUEUE_FLUSH, null);
+        }
+        if(showsText){
+            TextView textView = (TextView)findViewById(R.id.textView_readCodeText);
+            textView.setText(message);
+        }
     }
 
     @Override
@@ -59,5 +69,14 @@ public class reader extends AppCompatActivity {
             t1.shutdown();
         }
         super.onPause();
+    }
+    public void setVisibility(View view){
+        CheckBox visible = (CheckBox)findViewById(R.id.checkBox_textVisibility);
+        showsText = visible.isChecked();
+    }
+
+    public void setReadOutLoud(View view) {
+        CheckBox outLoud = (CheckBox)findViewById(R.id.checkBox_soundAvailable);
+        readsText = outLoud.isChecked();
     }
 }

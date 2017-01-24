@@ -10,4 +10,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.endarpine.cahqr.reader">
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView_readCodeText" />
+
+    <CheckBox
+        android:text="@string/textVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/checkBox_textVisibility"
+        android:layout_below="@+id/textView_readCodeText"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:onClick="setVisibility"
+        />
+
+    <CheckBox
+        android:text="@string/soundAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox_textVisibility"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/checkBox_soundAvailable"
+        android:onClick="setReadOutLoud"/>
 </RelativeLayout>
