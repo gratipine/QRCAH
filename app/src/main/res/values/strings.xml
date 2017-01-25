@@ -10,6 +10,9 @@
     <string name="addingPromptTextView">Please enter the text for which you want to generate QR:</string>
     <string name="addCodeSubmitButton">Submit</string>
 
+    <!--Strings for code shower activity-->
+    <string name="button_saveToDevice">Save to device</string>
+
     <!--Strings for scanning activity-->
     <string name="scanningMessageToUserTextView">Currently scanning</string>
 

@@ -10,4 +10,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.endarpine.cahqr.codePicture">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_addedCodeImage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="168dp"
+        android:id="@+id/textView_addedCodeText"/>
+
+    <Button
+        android:text="@string/button_saveToDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_addedCodeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/textView_addedCodeText"
+        android:id="@+id/button_saveImage"
+        android:onClick="saveQRtoDevice"/>
 </RelativeLayout>
