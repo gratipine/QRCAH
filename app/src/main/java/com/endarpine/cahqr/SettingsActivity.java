@@ -23,14 +23,13 @@ import java.util.List;
 
 public class SettingsActivity extends AppCompatPreferenceActivity {
 
-    //TODO: delete the unnecessary preferences
-    //todo: update preferences
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
      */
 
-    //todo: fix the settings: need sound control, visibility control, ability to control text size
+    //todo: fix the settings: ability to control text size - to be done in here. Source:
+            //https://developer.android.com/guide/topics/ui/settings.html - preference changes
     private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
         @Override
         public boolean onPreferenceChange(Preference preference, Object value) {
@@ -138,12 +137,13 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     /**
      * {@inheritDoc}
      */
+    /*
     @Override
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.pref_headers, target);
     }
-
+*/
     /**
      * This method stops fragment injection in malicious applications.
      * Make sure to deny any unknown fragments here.

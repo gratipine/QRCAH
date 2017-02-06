@@ -21,7 +21,6 @@ public class codePicture extends AppCompatActivity {
     private static String message;
     public static Bitmap QRcode;
 
-    //todo: fix layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

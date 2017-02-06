@@ -27,11 +27,13 @@ public class reader extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //sets the up/down keys to affect the media volume, not ringer
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setContentView(R.layout.activity_reader);
         //getting the contents of the QR from the scanner
         Intent intent = getIntent();
         message = intent.getStringExtra(scanningCode.EXTRA_MESSAGE);
+        //todo:implement this so that it can be repeated
         if(readsText){
             t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
