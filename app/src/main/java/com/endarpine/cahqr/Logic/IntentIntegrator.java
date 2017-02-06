@@ -25,7 +25,6 @@ import java.util.Map;
  */
 
 //Taken from the zxing documentation
-//TOdo: read through the whole thing
 public class IntentIntegrator {
     public static final int REQUEST_CODE = 0x0000C0de; //only use bottom 16 bits
     private static final String TAG = IntentIntegrator.class.getSimpleName();
@@ -39,7 +38,6 @@ public class IntentIntegrator {
     private static final String BSPLUS_PACKAGE = "com.srowen.bs.android";
 
     // supported barcode formats
-    //TODO: fix questionable arraylist cast
     public static final Collection<String> PRODUCT_CODE_TYPES = Arrays.asList("UPC_A", "UPC_E", "EAN_8", "EAN_13", "RSS_14");
     public static final Collection<String> ONE_D_CODE_TYPES =
             Arrays.asList("UPC_A", "UPC_E", "EAN_8", "EAN_13", "CODE_39", "CODE_93", "CODE_128",

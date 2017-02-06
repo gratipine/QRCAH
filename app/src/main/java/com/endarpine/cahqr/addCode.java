@@ -16,8 +16,8 @@ import android.widget.EditText;
 
 public class addCode extends FragmentActivity {
 
+    //internal string, can stay here for development purposes
     final static String EXTRA_MESSAGE = "Passed from the adding code activity";
-    final static String ALERT_TEXT = "You haven't written anything, so no code for you!";
 
     Button addCodeSubmitButton;
     EditText addCodeEditText;
@@ -47,11 +47,11 @@ public class addCode extends FragmentActivity {
     //creates an alert object and shows its message if the user did not write a code text before pressing Submit button
     private void showAlert(){
         AlertDialog.Builder builder1 = new AlertDialog.Builder(addCode.this);
-        builder1.setMessage(ALERT_TEXT);
+        builder1.setMessage(R.string.addingCodeAlertText);
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
-                "Ok",
+                R.string.ok,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();

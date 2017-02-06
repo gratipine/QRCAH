@@ -14,17 +14,8 @@ import android.widget.Toast;
 import java.util.Locale;
 
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.speech.tts.TextToSpeech;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
 
 import com.endarpine.cahqr.Logic.Facade;
-import com.endarpine.cahqr.R;
-
-import java.util.Locale;
 
 //source:https://www.tutorialspoint.com/android/android_text_to_speech.htm
 public class reader extends AppCompatActivity {
@@ -33,7 +24,6 @@ public class reader extends AppCompatActivity {
     public static Boolean showsText = Boolean.FALSE;
     public static Boolean readsText = Boolean.TRUE;
     private static String message;
-    //todo: implement in the setting change of the text visibility and readability as well
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

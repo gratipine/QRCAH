@@ -8,9 +8,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    //todo: add settings activity somehow
     //todo:refactor the names of the strings and buttons to be similar (UI)
-    //todo:refactor to double ensure back button works
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
