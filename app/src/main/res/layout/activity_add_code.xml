@@ -11,21 +11,21 @@
     tools:context="com.endarpine.cahqr.addCode">
 
     <Button
-        android:text="@string/addCodeSubmitButton"
+        android:text="@string/button_addCodeSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addCodeEditText"
+        android:layout_below="@+id/editText_addCode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:id="@+id/addCodeSubmitButton"
+        android:id="@+id/button_addCodeSubmit"
         android:onClick="codeAdded"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:id="@+id/addCodePromptTextView"
-        android:text="@string/addingPromptTextView"
+        android:id="@+id/textView_addCodePrompt"
+        android:text="@string/textView_addCodePrompt"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -35,7 +35,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_marginTop="22dp"
-        android:id="@+id/addCodeEditText"
-        android:layout_below="@+id/addCodePromptTextView"
+        android:id="@+id/editText_addCode"
+        android:layout_below="@+id/textView_addCodePrompt"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

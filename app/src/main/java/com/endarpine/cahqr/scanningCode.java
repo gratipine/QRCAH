@@ -32,7 +32,7 @@ public class scanningCode extends AppCompatActivity {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(scanningCode.this);
                 alertBuilder
                         .setMessage(getString(R.string.delayMessageString))
-                        .setPositiveButton(getString(R.string.tryAgain), new DialogInterface.OnClickListener() {
+                        .setPositiveButton(getString(R.string.answer_tryAgain), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 //restart activity
@@ -41,7 +41,7 @@ public class scanningCode extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         })
-                        .setNegativeButton(getString(R.string.goBack), new DialogInterface.OnClickListener() {
+                        .setNegativeButton(getString(R.string.answer_goBack), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 //go back

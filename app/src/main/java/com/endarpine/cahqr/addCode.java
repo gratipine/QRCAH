@@ -1,13 +1,9 @@
 package com.endarpine.cahqr;
 
-import android.app.Dialog;
-import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,8 +22,8 @@ public class addCode extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_code);
 
-        addCodeSubmitButton = (Button)findViewById(R.id.addCodeSubmitButton);
-        addCodeEditText = (EditText)findViewById(R.id.addCodeEditText);
+        addCodeSubmitButton = (Button)findViewById(R.id.button_addCodeSubmit);
+        addCodeEditText = (EditText)findViewById(R.id.editText_addCode);
 
     }
 
@@ -47,11 +43,11 @@ public class addCode extends FragmentActivity {
     //creates an alert object and shows its message if the user did not write a code text before pressing Submit button
     private void showAlert(){
         AlertDialog.Builder builder1 = new AlertDialog.Builder(addCode.this);
-        builder1.setMessage(R.string.addingCodeAlertText);
+        builder1.setMessage(R.string.text_addingCodeAlert);
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
-                R.string.ok,
+                R.string.answer_ok,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();

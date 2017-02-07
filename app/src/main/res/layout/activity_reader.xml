@@ -19,7 +19,7 @@
         android:id="@+id/textView_readCodeText" />
 
     <CheckBox
-        android:text="@string/textVisibility"
+        android:text="@string/checkBox_textVisibility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -31,7 +31,7 @@
         />
 
     <CheckBox
-        android:text="@string/soundAvailability"
+        android:text="@string/checkBox_soundAvailable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkBox_textVisibility"

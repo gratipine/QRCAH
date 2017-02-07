@@ -54,7 +54,7 @@ public class codePicture extends AppCompatActivity {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder
                 .setMessage(getString(R.string.exceptionHandlerMessage1)+ exceptionName + getString(R.string.exceptionHandlerMessage2))
-                .setPositiveButton(getString(R.string.tryAgain), new DialogInterface.OnClickListener() {
+                .setPositiveButton(getString(R.string.answer_tryAgain), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //go back to previous activity and try again
@@ -62,7 +62,7 @@ public class codePicture extends AppCompatActivity {
                     }
                 })
                 //todo: double check the intent creation with class.this
-                .setNegativeButton(getString(R.string.mainScreen), new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(R.string.answer_mainScreen), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //go back to main screen

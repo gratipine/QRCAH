@@ -1,9 +1,9 @@
 <resources>
     <!--Strings alert answers-->
-    <string name="ok">Ok</string>
-    <string name="tryAgain">Try again</string>
-    <string name="mainScreen">Main screen</string>
-    <string name="goBack">Go back</string>
+    <string name="answer_ok">Ok</string>
+    <string name="answer_tryAgain">Try again</string>
+    <string name="answer_mainScreen">Main screen</string>
+    <string name="answer_goBack">Go back</string>
 
     <!-- Strings for the Main activity-->
     <string name="app_name">CAHQR</string>
@@ -13,10 +13,10 @@
     <string name="button_toSettings">Settings</string>
 
     <!--Strings for the adding activity-->
-    <string name="addingPromptTextView">Please enter the text for which you want to generate QR:</string>
-    <string name="addCodeSubmitButton">Submit</string>
+    <string name="textView_addCodePrompt">Please enter the text for which you want to generate QR:</string>
+    <string name="button_addCodeSubmit">Submit</string>
 
-    <string name="addingCodeAlertText">You haven\'t written anything, so no code for you!</string>
+    <string name="text_addingCodeAlert">You haven\'t written anything, so no code for you!</string>
 
     <!--Strings for code shower activity-->
     <string name="button_saveToDevice">Save to device</string>
@@ -29,16 +29,16 @@
     <string name="delayMessageString">This is taking too long. Would you like to: </string>
 
     <!--Strings for about activity-->
-    <string name="aboutHeading">About</string>
-    <string name="aboutExplanation">The app reads a QR code which is presented in front of it,
+    <string name="textView_aboutHeading">About</string>
+    <string name="textView_aboutExplanation">The app reads a QR code which is presented in front of it,
         decodes it and displays the text on the screen and/or reads it out loud (these settings
         can be changed at the setting menu). It was written mostly with the idea to be used for
         card games to help visually challenged people, but could be put to other uses as well.
     </string>
 
     <!--Strings for reader activity-->
-    <string name="textVisibility">Have text be visible</string>
-    <string name="soundAvailability">Have the app read out the text</string>
+    <string name="checkBox_textVisibility">Have text be visible</string>
+    <string name="checkBox_soundAvailable">Have the app read out the text</string>
 
     <string name="title_activity_settings">Settings</string>
 
