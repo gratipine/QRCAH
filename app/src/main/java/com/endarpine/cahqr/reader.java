@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,20 +34,10 @@ public class reader extends AppCompatActivity {
         //getting the contents of the QR from the scanner
         Intent intent = getIntent();
         message = intent.getStringExtra(scanningCode.EXTRA_MESSAGE);
-        //todo:implement this so that it can be repeated
         if(readsText){
-            t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int status) {
-                    if(status != TextToSpeech.ERROR){
-                        t1.setLanguage(Locale.ENGLISH);
-                    }
-                }
-            });
-            String stringToSpeak = Facade.getQRMessage(QR);
-            Toast.makeText(getApplicationContext(), stringToSpeak,Toast.LENGTH_SHORT).show();
-            //todo: figure out something not deprecated
-            t1.speak(stringToSpeak, TextToSpeech.QUEUE_FLUSH, null);
+            readOutLoud();
+            Button repeat = (Button)findViewById(R.id.button_repeatReadingOutLoud);
+            repeat.setVisibility(View.VISIBLE);
         }
         if(showsText){
             TextView textView = (TextView)findViewById(R.id.textView_readCodeText);
@@ -70,5 +61,21 @@ public class reader extends AppCompatActivity {
     public void setReadOutLoud(View view) {
         CheckBox outLoud = (CheckBox)findViewById(R.id.checkBox_soundAvailable);
         readsText = outLoud.isChecked();
+    }
+
+    public void readOutLoud(){
+
+            t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int status) {
+                    if(status != TextToSpeech.ERROR){
+                        t1.setLanguage(Locale.ENGLISH);
+                    }
+                }
+            });
+            String stringToSpeak = Facade.getQRMessage(QR);
+            Toast.makeText(getApplicationContext(), stringToSpeak,Toast.LENGTH_SHORT).show();
+            //todo: figure out something not deprecated
+            t1.speak(stringToSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 }

@@ -39,11 +39,10 @@
     <!--Strings for reader activity-->
     <string name="checkBox_textVisibility">Have text be visible</string>
     <string name="checkBox_soundAvailable">Have the app read out the text</string>
+    <string name="button_repeatReadingOutLoud">Repeat</string>
 
-    <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->
-
     <!-- Example General settings -->
     <string name="pref_headerGeneral">General</string>
 
