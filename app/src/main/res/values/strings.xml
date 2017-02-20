@@ -1,9 +1,12 @@
 <resources>
-    <!--Strings alert answers-->
+    <!--Strings alert answers and messages-->
     <string name="answer_ok">Ok</string>
     <string name="answer_tryAgain">Try again</string>
     <string name="answer_mainScreen">Main screen</string>
     <string name="answer_goBack">Go back</string>
+    <string name="answer_internalStorage">Internal storage</string>
+    <string name="answer_externalStorage">External storage</string>
+    <string name="message_saveTo">Save to:</string>
 
     <!-- Strings for the Main activity-->
     <string name="app_name">CAHQR</string>
@@ -41,7 +44,6 @@
     <string name="checkBox_soundAvailable">Have the app read out the text</string>
     <string name="button_repeatReadingOutLoud">Repeat</string>
 
-    <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->
     <!-- Example General settings -->

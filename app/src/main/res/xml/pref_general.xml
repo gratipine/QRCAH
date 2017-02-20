@@ -25,4 +25,4 @@
         android:positiveButtonText="@null"
         android:title="@string/pref_titleChooseSize" />
 
-</PreferenceScreen>
+    </PreferenceScreen>

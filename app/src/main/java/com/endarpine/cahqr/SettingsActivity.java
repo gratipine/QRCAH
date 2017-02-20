@@ -20,9 +20,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * to reflect its new value.
      */
 
-    //todo: clean up the android manifest - there are remains of previous activities there
-    //todo: fix the settings: ability to control text size - to be done in here. Source:
-            //https://developer.android.com/guide/topics/ui/settings.html - preference changes
     private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
         @Override
         public boolean onPreferenceChange(Preference preference, Object value) {
